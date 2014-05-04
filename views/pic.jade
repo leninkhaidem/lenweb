@@ -1,0 +1,88 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0 maximum-scale=1.0')
+    link(href='/jquery-mobile-bower/css/jquery.mobile-1.4.2.css', rel='stylesheet')
+    script(src='/jquery/dist/jquery.js')
+    script(src='/jquery-mobile-bower/js/jquery.mobile-1.4.2.js')
+    script(src='/jquery.lazyload/jquery.lazyload.js')
+    style(type='text/css').
+      img {
+      max-height: 100%;
+      max-width: 100%;
+      }
+      .center-wrapper {
+      text-align: center;
+      }
+      .center-wrapper * {
+      margin: 0 auto;
+      }
+      .btn {
+      width: 100px !important;
+      }
+  body
+    #home(data-role='page')
+      div(data-role='header', data-theme='b')
+        h1 Search Image
+      .ui-content.ui-body-inherit.ui-corner-all.ui-shadow-inset.ui-input-has-clear(data-role='content')
+        input#searchString.search(type='search', placeholder='search ..', required='')
+        .center-wrapper
+          button#submitButton.ui-btn.ui-shadow.btn Search
+        .center-wrapper
+          a.ui-btn.ui-shadow.btn(href='#imagePage') display
+      footer(data-role='footer', data-position='fixed', data-theme='b')
+        nav(data-role='navbar')
+          ul
+            li
+              a(href='#home', data-icon='home') home
+            li
+              a(href='#', data-icon='grid') contact
+            li
+              a(href='#', data-icon='info') info
+    #imagePage(data-role='page', data-theme='a')
+      header(data-role='header', data-theme='b', data-position='fixed')
+        h1 Photo Library
+      article(data-role='content')
+        ul#imageList(data-role='listview', data-filter='true')
+      footer(data-role='footer', data-position='fixed', data-theme='b')
+        nav(data-role='navbar')
+          ul
+            li
+              a(href='#home', data-icon='home') home
+            li
+              a(href='#', data-icon='grid') contact
+            li
+              a(href='#', data-icon='info') info
+    #pic1(data-role='page')
+      header(data-role='header', data-theme='b', data-position='fixed')
+        h1 Picture1
+        a(href='#home', data-icon='home', data-iconpos='notext')
+      img.pic(src='#')
+      p a very nice scenery
+      footer(data-role='footer', data-position='fixed', data-theme='b')
+        nav(data-role='navbar')
+          ul
+            li
+              a(href='#home', data-icon='home') home
+            li
+              a(href='#', data-icon='grid') contact
+            li
+              a(href='#', data-icon='info') info
+    #pic2(data-role='page')
+      header(data-role='header', data-theme='b', data-position='fixed')
+        h1 Picture2
+        a(href='#home', data-icon='home', data-iconpos='notext')
+      img.pic(src='#')
+      p a very nice scenery2
+      footer(data-role='footer', data-position='fixed', data-theme='b')
+        nav(data-role='navbar')
+          ul
+            li
+              a(href='#home', data-icon='home') home
+            li
+              a(href='#', data-icon='grid') contact
+            li
+              a(href='#', data-icon='info') info
+  script(src='/javascripts/functions.js')

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+    <link href="/jquery-mobile-bower/css/jquery.mobile-1.4.2.css" rel="stylesheet">
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/jquery-mobile-bower/js/jquery.mobile-1.4.2.js"></script>
+    <script src="/jquery.lazyload/jquery.lazyload.js"></script>
+    <style type="text/css">
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .center-wrapper {
+        text-align: center;
+    }
+    .center-wrapper * {
+        margin: 0 auto;
+    }
+    .btn {
+        width: 100px !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="home">
+        <div data-role="header" data-theme="b">
+            <h1>Search Image</h1>
+        </div>
+        <div data-role="content" class="ui-content ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear ">
+            <input type="search" id="searchString" class="search" placeholder="search .." required></input>
+            <div class="center-wrapper">
+                <button class="ui-btn ui-shadow btn" id="submitButton">Search</button>
+            </div>
+            <div class="center-wrapper">
+                <a class="ui-btn ui-shadow btn" href="#imagePage">display</a>
+
+            </div>
+
+        </div>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">home</a>
+                    </li>
+                    <li><a href="#" data-icon="grid">contact</a>
+                    </li>
+                    <li><a href="#" data-icon="info">info</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+    <div data-role="page" data-theme="a" id="imagePage">
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>Photo Library</h1>
+        </header>
+        <article data-role="content">
+            <ul data-role="listview" data-filter="true" id="imageList">
+
+            </ul>
+        </article>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">home</a>
+                    </li>
+                    <li><a href="#" data-icon="grid">contact</a>
+                    </li>
+                    <li><a href="#" data-icon="info">info</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <div data-role="page" id="pic1">
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>Picture1</h1>
+            <a href="#home" data-icon="home" data-iconpos="notext"></a>
+        </header>
+        <img src="#" class="pic">
+        <p>a very nice scenery</p>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">home</a>
+                    </li>
+                    <li><a href="#" data-icon="grid">contact</a>
+                    </li>
+                    <li><a href="#" data-icon="info">info</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <div data-role="page" id="pic2">
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>Picture2</h1>
+            <a href="#home" data-icon="home" data-iconpos="notext"></a>
+        </header>
+        <img src="#" class="pic">
+        <p>a very nice scenery2</p>
+        </header>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">home</a>
+                    </li>
+                    <li><a href="#" data-icon="grid">contact</a>
+                    </li>
+                    <li><a href="#" data-icon="info">info</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+<script src="/javascripts/functions.js"></script>
+
+</html>

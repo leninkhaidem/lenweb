@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+    <link href="/jquery-mobile-bower/css/jquery.mobile-1.4.2.css" rel="stylesheet">
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/jquery-mobile-bower/js/jquery.mobile-1.4.2.js"></script>
+    <script src="/javascripts/functions.js"></script>
+    <style type="text/css">
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .center-wrapper {
+        text-align: center;
+    }
+    .center-wrapper * {
+        margin: 0 auto;
+    }
+    .btn {
+        width: 100px !important;
+    }
+    </style>
+</head>
+
+<body>
+    
+    <div data-role="page" data-theme="a">
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>Photo Library</h1>
+        </header>
+        <article data-role="content">
+            <ul data-role="listview" data-filter="true">
+                <li>
+                    <a href="#pic1">
+                        <h1>picture1</h1>
+                        <img src="http://eswalls.com/wp-content/uploads/2014/01/scenery-hd-88331.jpg">
+                        <p>a very nice scenery</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#pic2">
+                        <h1>picture2</h1>
+                        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ_KE30NOgLe02uNWNJ_Q2KcLLloc0HtsvwOtMy8bxqoEngTzSywjQm9s-9">
+                        <p>a very nice scenery2</p>
+                    </a>
+                </li>
+            </ul>
+        </article>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">home</a>
+                    </li>
+                    <li><a href="#" data-icon="grid">contact</a>
+                    </li>
+                    <li><a href="#" data-icon="info">info</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <div data-role="page" id="pic1">
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>Picture1</h1>
+            <a href="#home" data-icon="home" data-iconpos="notext"></a>
+        </header>
+        <img src="http://eswalls.com/wp-content/uploads/2014/01/scenery-hd-88331.jpg" class="pic">
+        <p>a very nice scenery</p>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">home</a>
+                    </li>
+                    <li><a href="#" data-icon="grid">contact</a>
+                    </li>
+                    <li><a href="#" data-icon="info">info</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <div data-role="page" id="pic2">
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>Picture2</h1>
+            <a href="#home" data-icon="home" data-iconpos="notext"></a>
+        </header>
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ_KE30NOgLe02uNWNJ_Q2KcLLloc0HtsvwOtMy8bxqoEngTzSywjQm9s-9" class="pic">
+        <p>a very nice scenery2</p>
+        </header>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">home</a>
+                    </li>
+                    <li><a href="#" data-icon="grid">contact</a>
+                    </li>
+                    <li><a href="#" data-icon="info">info</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+
+</html>
