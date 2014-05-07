@@ -5,7 +5,6 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0 maximum-scale=1.0')
     link(href='/jquery-mobile-bower/css/jquery.mobile-1.4.2.css', rel='stylesheet')
-    link(href='/lazyloadxt/dist/jquery.lazyloadxt.spinner.css', rel='stylesheet')
     link(href='/lazyloadxt/dist/jquery.lazyloadxt.fadein.css', rel='stylesheet')
     script(src='/jquery/dist/jquery.js')
     script(src='/jquery-mobile-bower/js/jquery.mobile-1.4.2.js')   
@@ -23,6 +22,11 @@ html(lang='en')
       }
       .btn {
       width: 100px !important;
+      }
+      .circle {
+      min-height: 50px;
+      min-width: 100%;
+      background: url('/lazyloadxt/dist/loading.gif') no-repeat 50% 50%;
       }
   body
     #home(data-role='page')
