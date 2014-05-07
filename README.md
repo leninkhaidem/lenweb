@@ -1,4 +1,4 @@
 lenweb
 ======
 
-sdf
+set up the server in linux box
