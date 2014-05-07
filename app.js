@@ -49,6 +49,7 @@ app.get('/', function(req, res) {
 });
 app.post('/search', function(req, res) {
     var string = req.body.search;
+    string = string.replace(/ /g, "%20");
     console.log('got a request! search string is ' + string);
     //if (!req.cookies.search || (req.cookies.search != string)) {
     var link = "http://www.imagesbazaar.com/advancesearchresult.aspx?id=" + string + "%20&idtot=" + string + "&exec=True&nonexec=True";
