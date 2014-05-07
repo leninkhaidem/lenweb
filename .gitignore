@@ -7,3 +7,6 @@ test.js
 public/pic.html
 views/index.jade
 views/dev.jade
+nodemon*
+generate_*
+server.*.
