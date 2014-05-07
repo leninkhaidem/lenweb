@@ -49,7 +49,7 @@ app.get('/', function(req, res) {
 });
 app.post('/search', function(req, res) {
     var string = req.body.search;
-    console.log('got a request! current search string is ' + string + ' cached string is ' + req.cookies);
+    console.log('got a request! search string is ' + string);
     //if (!req.cookies.search || (req.cookies.search != string)) {
     console.log('not search ' + string + ' before');
     var link = "http://www.imagesbazaar.com/advancesearchresult.aspx?id=" + string + "%20&idtot=" + string + "&exec=True&nonexec=True";
