@@ -17,7 +17,6 @@
   ],
   "dependencies": {
     "jquery": "~2.1.1",
-    "jquery.lazyload": "~1.9.3",
     "lazyloadxt": "~1.0.2",
     "jquery-mobile-bower": "~1.4.2"
   },
