@@ -5,13 +5,15 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0 maximum-scale=1.0')
     link(href='/jquery-mobile-bower/css/jquery.mobile-1.4.2.css', rel='stylesheet')
+    link(href='/lazyloadxt/dist/jquery.lazyloadxt.spinner.css', rel='stylesheet')
+    link(href='/lazyloadxt/dist/jquery.lazyloadxt.fadein.css', rel='stylesheet')
     script(src='/jquery/dist/jquery.js')
-    script(src='/jquery-mobile-bower/js/jquery.mobile-1.4.2.js')
-    script(src='/jquery.lazyload/jquery.lazyload.js')
+    script(src='/jquery-mobile-bower/js/jquery.mobile-1.4.2.js')   
     style(type='text/css').
       img {
       max-height: 100%;
       max-width: 100%;
+      padding: 20px;
       }
       .center-wrapper {
       text-align: center;
@@ -24,65 +26,39 @@ html(lang='en')
       }
   body
     #home(data-role='page')
-      div(data-role='header', data-theme='b')
+      div(data-role='header', data-theme='b', data-position="fixed")
         h1 Search Image
       .ui-content.ui-body-inherit.ui-corner-all.ui-shadow-inset.ui-input-has-clear(data-role='content')
-        input#searchString.search(type='search', placeholder='search ..', required='')
-        .center-wrapper
-          button#submitButton.ui-btn.ui-shadow.btn Search
-        .center-wrapper
-          a.ui-btn.ui-shadow.btn(href='#imagePage') display
+        div#searchArea
+          input#searchString.search(type='search', placeholder='search images ... ')
+          #area1.center-wrapper
+            button#submitButton.ui-btn.ui-shadow.btn Search
+        #area2
+        article(data-role='content')
+          ul#imageList(data-role='listview')
+          #marker-end
       footer(data-role='footer', data-position='fixed', data-theme='b')
         nav(data-role='navbar')
           ul
             li
-              a(href='#home', data-icon='home') home
+              a#searchAgain(data-icon='back' href="#searchString") search again
             li
-              a(href='#', data-icon='grid') contact
+              a(href='#contact', data-icon='grid') contact
             li
-              a(href='#', data-icon='info') info
-    #imagePage(data-role='page', data-theme='a')
-      header(data-role='header', data-theme='b', data-position='fixed')
-        h1 Photo Library
-      article(data-role='content')
-        ul#imageList(data-role='listview', data-filter='true')
-      footer(data-role='footer', data-position='fixed', data-theme='b')
-        nav(data-role='navbar')
-          ul
-            li
-              a(href='#home', data-icon='home') home
-            li
-              a(href='#', data-icon='grid') contact
-            li
-              a(href='#', data-icon='info') info
-    #pic1(data-role='page')
-      header(data-role='header', data-theme='b', data-position='fixed')
-        h1 Picture1
-        a(href='#home', data-icon='home', data-iconpos='notext')
-      img.pic(src='#')
-      p a very nice scenery
-      footer(data-role='footer', data-position='fixed', data-theme='b')
-        nav(data-role='navbar')
-          ul
-            li
-              a(href='#home', data-icon='home') home
-            li
-              a(href='#', data-icon='grid') contact
-            li
-              a(href='#', data-icon='info') info
-    #pic2(data-role='page')
-      header(data-role='header', data-theme='b', data-position='fixed')
-        h1 Picture2
-        a(href='#home', data-icon='home', data-iconpos='notext')
-      img.pic(src='#')
-      p a very nice scenery2
-      footer(data-role='footer', data-position='fixed', data-theme='b')
-        nav(data-role='navbar')
-          ul
-            li
-              a(href='#home', data-icon='home') home
-            li
-              a(href='#', data-icon='grid') contact
-            li
-              a(href='#', data-icon='info') info
+              a(href='#info', data-icon='info', data-transition="flip") info
+    #info(data-role='page', data-dialog='true')
+      div(data-role='header', data-theme='b')
+        h1 Info
+      .ui-content(role='main')
+        h1 What does the site do?
+        p
+          | It is just a basic implementation of image search. A simple form is used to send a "GET" request to imagebazaar indirectly through NodeJs server. The html reponse from the server is parsed using JDOM, image src is manulated and returned as json object. lazyloadxt library is used for lazy loading of the images.
+        a.ui-btn.ui-shadow.ui-corner-all.ui-btn-a(href='#home', data-rel='back') Sounds good
+    #contact(data-role='page', data-dialog='true')
+      div(data-role='header', data-theme='b')
+        h1 Contact me ?
+      .ui-content(role='main')
+        h1 leninkhaidem@gmail.com
+        a.ui-btn.ui-shadow.ui-corner-all.ui-btn-a(href='#home', data-rel='back') OK
+  script(src='/lazyloadxt/dist/jquery.lazyloadxt.js')
   script(src='/javascripts/functions.js')

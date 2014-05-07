@@ -2,3 +2,8 @@
 node_modules/*
 bower_components*
 *.zip
+*.log
+test.js
+public/pic.html
+views/index.jade
+views/dev.jade
