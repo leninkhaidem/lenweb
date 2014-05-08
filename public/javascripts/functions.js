@@ -34,6 +34,8 @@ $(document).ready(function() {
                 .done(function(data) {
                     console.log("data is " + data)
                     if (data.length == 0) {
+                        $("#area1").fadeIn(1500);
+                        $('#area2').html("").removeClass('loading');
                         alert('search returned 0 result');
                     } else {
                         for (var i = 0; i < data.length; i++) {
